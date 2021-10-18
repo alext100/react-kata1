@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-const Circle = () => {
-    const [state, setState] = useState(true);
+const Circle = ({ circles }) => {
+    const [selected, setSelected] = useState(true);
 
     return (
-        <div onClick={() => setState(!state)} className={state ? 'yellow circleContainer' : 'red circleContainer'}><span className="circle"></span></div>
-    );
+
+        <div onClick={() => setSelected(!selected)} className={selected ? 'yellow circleContainer' : 'red circleContainer'}></div>
+    )
 }
 
 export default Circle;
